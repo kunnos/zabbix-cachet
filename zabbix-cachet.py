@@ -56,7 +56,7 @@ class Zabbix:
         s.auth = (user, password)
 
         self.zapi = ZabbixAPI(server, s)
-        self.zapi.session.verify = verify
+        self.zapi.session.verify = False
         self.zapi.login(user, password)
         self.version = self.get_version()
 
